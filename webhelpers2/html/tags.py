@@ -439,7 +439,7 @@ class Options(_OptionsList):
         if values is None:
             return ("",)
         is_string = isinstance(values, six.string_types)
-        is_seq = isinstance(values, collections.Sequence)
+        is_seq = isinstance(values, collections.abc.Sequence)
         if is_string or not is_seq:
             return (values,)
         else:
